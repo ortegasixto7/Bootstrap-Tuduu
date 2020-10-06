@@ -16,6 +16,15 @@
     <title>Register - Tuduu</title>
   </head>
   <body>
+    <!-- Danger Message -->
+    <div class="container">
+      <div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
+    </div>
+    <!-- Success Message -->
+    <div class="container">
+      <div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
+    </div>
+
     <div class="container">
       <h1 class="text-center mt-3">Tuduu</h1>
       <div class="row mt-4 justify-content-center">
@@ -26,24 +35,73 @@
               <form action="index.html">
                 <div class="form-group">
                   <label for="inputFirstName">First Name</label>
-                  <input type="text" class="form-control" id="inputFirstName" autofocus />
+                  <input
+                    type="text"
+                    class="form-control is-invalid"
+                    id="inputFirstName"
+                    autofocus
+                    aria-describedby="validationInputFirstNameFeedback"
+                  />
+                  <div id="validationInputFirstNameFeedback" class="invalid-feedback">
+                    Input Required.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputLastName">Last Name</label>
-                  <input type="text" class="form-control" id="inputLastName" />
+                  <input
+                    type="text"
+                    class="form-control is-invalid"
+                    id="inputLastName"
+                    aria-describedby="validationInputLastNameFeedback"
+                  />
+                  <div id="validationInputLastNameFeedback" class="invalid-feedback">
+                    Input Required.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">Email</label>
-                  <input type="email" class="form-control" id="inputEmail" />
+                  <input
+                    type="email"
+                    class="form-control is-invalid"
+                    id="inputEmail"
+                    aria-describedby="validationInputEmailFeedback"
+                  />
+                  <div id="validationInputEmailFeedback" class="invalid-feedback">
+                    Input Required.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword">Password</label>
-                  <input type="password" class="form-control" id="inputPassword" />
+                  <input
+                    type="password"
+                    class="form-control is-invalid"
+                    id="inputPassword"
+                    aria-describedby="validationInputPasswordFeedback"
+                  />
+                  <div id="validationInputPasswordFeedback" class="invalid-feedback">
+                    Input Required.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputSecurityCode">Security Code</label>
-                  <input type="password" class="form-control" id="inputSecurityCode" />
+                  <input
+                    type="password"
+                    class="form-control is-invalid"
+                    id="inputSecurityCode"
+                    aria-describedby="validationInputSecurityCodeFeedback"
+                  />
+                  <div id="validationInputSecurityCodeFeedback" class="invalid-feedback">
+                    Input Required.
+                  </div>
                 </div>
+
+                <!-- Loading component -->
+                <div class="d-flex justify-content-center">
+                  <div class="spinner-grow" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+
                 <div class="form-group mt-5">
                   <button type="submit" class="btn btn-block btn-outline-success">Register</button>
                 </div>
